@@ -80,7 +80,7 @@ class Sigmoid(Layer):
   # Given dL/dY (grad_output), computes the partial derivative dL/dX (grad_input) using the Chain Rule.
   # Note: learning_rate is included for consistency but not used since there are no "learnable" parameters in this activation layer.
   def backward(self, grad_local, learning_rate):
-    self.grad_output = grad_output
+    self.grad_output = grad_local
     sigmoid = 1 / (1 + np.exp(self.input))
     self.grad_input = self.grad_output * (sigmoid * (1 - sigmoid))
     return self.grad_input
