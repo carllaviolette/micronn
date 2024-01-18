@@ -13,7 +13,7 @@ class Layer:
         raise NotImplementedError
 
     # Computes dL/dX for a given dL/dY (and updates parameters if any).
-    def backward(self, grad_output, learning_rate):
+    def backward(self, grad_local, learning_rate):
         raise NotImplementedError
 
 
